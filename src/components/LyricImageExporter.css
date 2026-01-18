@@ -1,0 +1,68 @@
+/* LyricImageExporter.css - UI styles for the export card */
+
+.lyric-export-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.lyric-card {
+  width: 100%;
+  max-width: 1024px;
+  background: linear-gradient(135deg, #0f1724 0%, #071833 100%);
+  color: #e6eef8;
+  padding: 32px;
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(2,6,23,0.6);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+.lyric-text {
+  white-space: pre-wrap;
+  font-weight: 600;
+  font-size: 22px;
+  max-height: min(600px, 60vh);
+  overflow: auto;
+  margin-top: 8px;
+  word-break: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+.lyric-header {
+  font-size: 16px;
+  color: rgba(230,238,248,0.85);
+  opacity: 0.95;
+}
+.lyric-footer {
+  margin-top: 14px;
+  font-size: 13px;
+  color: rgba(230,238,248,0.7);
+}
+
+.export-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.export-btn {
+  background: #7c3aed;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.export-btn[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .lyric-card { padding: 20px; font-size: 18px; }
+  .lyric-text { font-size: 18px; }
+}
